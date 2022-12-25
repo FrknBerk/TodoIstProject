@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!--Navbar Header Start Here-->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Todo'm</a>
+            </div>
+            <!--Navbar Header End Here-->
+            <!--Menu Start Here-->
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">AnaSayfa</a></li>
+                <li><a href="#">Tamamlanan Görevler</a></li>
+                <!--dropdown Menu Start-->
+                @*<li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Technology
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">.NET</a></li>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">ASP.NET MVC</a></li>
+                        <li><a href="#">Java</a></li>
+                    </ul>
+                </li>*@
+                <!--dropdown Menu End-->
+                <li><a href="#">Profilim</a></li>
+            </ul>
+            <!--Menu End Here-->
+            <!--Right Aligned Menu Start-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="@Url.Action("Logout","Home")">Çıkış</a></li>
+            </ul>
+            <!--Right Aligned Menu End-->
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

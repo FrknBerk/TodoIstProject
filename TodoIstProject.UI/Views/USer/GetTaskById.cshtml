@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "GetTaskById";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model TodoIstProject.Entities.Concrete.TodoIstTask
+<div style="padding:5px;">
+    @using (Html.BeginForm("GetTaskById","USer",FormMethod.Post))
+    {
+       @Html.HiddenFor(x => x.CreateTaskId) 
+       @Html.HiddenFor(x  => x.UserId)
+        <br />
+        <div class="form-group">
+            <label for="exampleInputEmail1">Başlık</label>
+            @Html.TextBoxFor(x => x.Title, new {@class = "form-control"})
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Açıklama</label>
+            @Html.TextBoxFor(x => x.Description, new {@class = "form-control"})
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Bitiş Tarihi</label>
+            @Html.TextBoxFor(x => x.FinishDate, new {@class="form-control", @type = "date"})
+        </div>
+        
+        <div class="form-check">
+            @Html.CheckBoxFor(x => x.IsCompleted, new {@class = "form-control", @type = "check"})
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+    }
+</div>
+
+

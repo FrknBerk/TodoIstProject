@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="105.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Project.Core\Project.Core.csproj" />
+    <ProjectReference Include="..\TodoIstProject.Business\TodoIstProject.Business.csproj" />
+    <ProjectReference Include="..\TodoIstProject.DataAccess\TodoIstProject.DataAccess.csproj" />
+    <ProjectReference Include="..\TodoIstProject.Entities\TodoIstProject.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
